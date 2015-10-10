@@ -173,3 +173,4 @@ SistersBehindBars.Web/Views/web.config
 SistersBehindBars.Web/Web.Debug.config
 SistersBehindBars.Web/Web.Release.config
 SistersBehindBars.Web/Web.config
+.vs/config/applicationhost.config
