@@ -1,0 +1,46 @@
+﻿@model SistersBehindBars.Web.ViewModels.ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+<div class="container contact-form">
+    <h1>Contact Form</h1>
+    <div class="">
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <h5 class="mix-txt_colorError">An Error Occured:</h5>
+            <ul>
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(errors => errors.Errors))
+                {
+                    <li class="mix-txt_colorError">@error.ErrorMessage</li>
+                }
+            </ul>
+        }
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            <div class="container container-fluid">
+                <div class="row">
+                    <div class="col-xs-5 hidden">@Html.LabelFor(x => x.FirstName)</div>
+                    <div class="col-xs-7">@Html.TextBoxFor(x => x.FirstName, new { @class = "input-sm", placeholder = Html.DisplayNameFor(x => x.FirstName) })</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 hidden">@Html.LabelFor(x => x.LastName)</div>
+                    <div class="col-xs-7">@Html.TextBoxFor(x => x.LastName, new { @class = "input-sm", placeholder = Html.DisplayNameFor(x => x.LastName) })</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 hidden">@Html.LabelFor(x => x.Phone)</div>
+                    <div class="col-xs-7">@Html.TextBoxFor(x => x.Phone, new { @class = "input-sm", type = "tel", placeholder = "555-555-555" })</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 hidden">@Html.LabelFor(x => x.Email)</div>
+                    <div class="col-xs-7">@Html.TextBoxFor(x => x.Email, new { @class = "input-sm", placeholder = Html.DisplayNameFor(x => x.Email) })</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 hidden">@Html.LabelFor(x => x.Message)</div>
+                    <div class="col-xs-7">@Html.TextAreaFor(x => x.Message, new { @style = "width: 250px; height: 150px;", placeholder = "What is your message?" })</div>
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg" value="Send" />
+            </div>
+        }
+    </div>
+</div>
+    
