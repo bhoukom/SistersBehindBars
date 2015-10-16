@@ -1,5 +1,5 @@
 ﻿$(function () {
-    var topoffset = 300;
+    var topoffset = 100;
     var slideQty = $('#featured .item').length;
     var windowHeight = $(window).height();
     var randSlide = Math.floor(Math.random() * slideQty);
@@ -53,7 +53,7 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top-topoffset+5
+                        scrollTop: target.offset().top-topoffset
                     }, 500);
                     return false;
                 }
