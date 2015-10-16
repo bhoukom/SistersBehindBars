@@ -1,17 +1,24 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
 
+html { 
+  overflow-y: scroll; 
+}
+
 body {
     padding-top: 0;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 300;
     font-size: 2em;
     position: relative;
+    color: #000523;
+    background-color: #fff0de;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Open Sans", sans-serif;
     font-weight: 100;
     margin: 0;
+    color: #000523;
 }
 
 .input-sm {
@@ -33,27 +40,27 @@ header .navbar-default {
 }
 
 header .navbar-default .navbar-nav a {
-    color: white;
+    color: #fff0de;
 }
 
 header .navbar-default .navbar-nav a.inbody {
-    color: gray;
+    color: #fff0de;
 }
 
 header .navbar-default .navbar-nav a:hover {
-    color: #EEC856;
+    color: #FFF056;
 }
 
 header .navbar-default .navbar-nav .active a {
     font-weight: 700;
-    color: #EEC856;
+    color: #FFF056;
     background: transparent;
-    border-bottom: 4px solid #EEC856;
+    border-bottom: 4px solid #FFF056;
     text-shadow: none;
 }
 
 header .navbar-default .navbar-nav .active a:hover {
-    color: #E15D5F;
+    color: #fff7a3;
     background: transparent;
     text-shadow: none;
 }
@@ -64,7 +71,7 @@ header .navbar-brand {
 }
 
 header .navbar-brand h1 {
-    color: white;
+    color: #fff0de;
     margin: 0;
     font-size: 1.3em;
     font-weight: 400;
@@ -73,23 +80,19 @@ header .navbar-brand h1 {
 
 /***Navbar Mobile Menu***/
 header .navbar-toggle {
-    background-color: #EEC856;
-}
-
-header .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
+    background-color: #FFF056;
 }
 
 header .navbar{
     background-color: #000000;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 5, 35, .8);
 }
 
 @media only screen
 and (max-width: 768px) {
     header .navbar-collapse.in {
         background-color: #000000;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 5, 35, .8);
     }
 }
 
