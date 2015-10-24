@@ -116,14 +116,14 @@ and (max-width: 768px) {
     text-align: center;
 }
 
-#bakedgoods img {
+.bakedgoods img {
     display: block;
-    width: 80px;
+    width: 50%;
     margin: 0 auto;
     margin-bottom: 5px;
 }
 
-#bakedgoods h3 {
+.bakedgoods h3 {
     margin-bottom: 10px;
 }
 
