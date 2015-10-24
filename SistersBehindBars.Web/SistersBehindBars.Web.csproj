@@ -86,11 +86,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\media\images\AngelFood.jpg" />
     <Content Include="assets\media\images\brownies.jpg" />
     <Content Include="assets\media\images\ChocChipMuffins.jpg" />
     <Content Include="assets\media\images\cookie.jpg" />
     <Content Include="assets\media\images\cookies.jpg" />
+    <Content Include="assets\media\images\Cupcake.png" />
+    <Content Include="assets\media\images\cupcakes.png" />
     <Content Include="assets\media\images\SocialIcons\FacebookCake.png" />
     <Content Include="assets\media\images\SocialIcons\InstagramCake.png" />
     <Content Include="assets\media\images\SocialIcons\PinterestCake.png" />
