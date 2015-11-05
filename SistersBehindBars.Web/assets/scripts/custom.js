@@ -1,5 +1,5 @@
 ﻿$(function () {
-    var topoffset = 100;
+    var topoffset = 20;
     var slideQty = $('#featured .item').length;
     var windowHeight = $(window).height();
     var randSlide = Math.floor(Math.random() * slideQty);
@@ -32,7 +32,7 @@
 
     $('body').scrollspy({
         target: 'header .navbar',
-        offset: topoffset
+        offset: topoffset + 40
     
     });
 

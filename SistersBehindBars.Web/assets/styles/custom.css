@@ -88,6 +88,10 @@ header .navbar{
     background-color: rgba(0, 5, 35, .8);
 }
 
+header .navbar-collapse{
+    overflow: hidden;
+}
+
 @media only screen
 and (max-width: 768px) {
     header .navbar-collapse.in {
