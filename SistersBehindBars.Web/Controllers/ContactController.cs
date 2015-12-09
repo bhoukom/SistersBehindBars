@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 using SistersBehindBars.Web.Services;
 using SistersBehindBars.Web.ViewModels;
+using System.Configuration;
 
 namespace SistersBehindBars.Web.Controllers
 {
@@ -32,11 +33,11 @@ namespace SistersBehindBars.Web.Controllers
                 var message = new MailMessage()
                 {
                     Subject = "New Inquiry!",
-                    Body = string.Format("<h3>Hello Sisters! Someone Has Messaged You!</h3><p>{0}</p><p><b>Contact Info:</b><br/>{1} {2}<br/>{3}<br/>{4}</p>", body, model.FirstName, model.LastName, model.Phone, model.Email),
+                    Body = string.Format("<h3>Hello Sisters! Someone Has Contacted You!</h3><p>{0}</p><p><b>Contact Info:</b><br/>{1} {2}<br/>{3}<br/>{4}</p>", body, model.FirstName, model.LastName, model.Phone, model.Email),
                     IsBodyHtml = true,
                 };
 
-                message.To.Add(new MailAddress("sistersbehindbars@gmail.com"));
+                message.To.Add(ConfigurationManager.AppSettings["SistersEmail"]);
 
                 SslMail.SendMail(message);
             }
